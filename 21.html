@@ -8,11 +8,28 @@
 </head>
 <body>
 <section>
-<img src="70.jpg" id="70">
-<img src="71.png" id="71">
-<img src="72.png" id="72">
-<img src="73.png" id="73">
+<img src="70.jpg" id="bg">
+<img src="71.png" id="lune">
+<img src="72.png" id="montagne">
+<img src="73.png" id="route">
 <h2 id="text">Projet 21</h2>
 </section>
+<script type="text/javascript">
+let bg = document.getElementById("bg");
+let moon = document.getElementById("lune");
+let mountain = document.getElementById("montagne");
+let road = document.getElementById("route");
+let text = document.getElementById("text");  
+
+window.addEventListener('scroll', function(){
+var value = window.scrollY;
+
+bg.style.top = value * 0.5 + 'px';
+lune.style.left = -value * 0.5 + 'px';
+montagne.style.top = -value * 0.15 + 'px';
+route.style.top = value * 0.15 + 'px';
+text.style.top = value * 1 + 'px';
+})
+</script>
 </body>
 </html>
